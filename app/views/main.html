@@ -1,0 +1,90 @@
+<div class="row">
+	<div class="col-sm-12">
+
+		<section id="slider"><!--slider-->
+			<div id="slider-carousel" class="carousel slide" data-ride="carousel">	
+				
+				<ol class="carousel-indicators">
+					<li ng-repeat="slide in slides" data-target="#slider-carousel" data-slide-to="{{$index}}" ng-class="getClass($index)"></li>
+				</ol>
+				
+				<div class="carousel-inner">
+					<div ng-repeat="slide in slides" class="item" ng-class="getClass($index)">
+						<div class="col-sm-6">
+							<h1>{{slide.title}}</h1>
+							<h2>{{slide.subtitle}}</h2>
+							<p>{{slide.text}}</p>
+						</div>
+						<div class="col-sm-6">
+							<img ng-src="{{slide.image}}" class="img-slider img-responsive" alt="{{slide.title}}" />
+						</div>
+					</div>						
+				</div>
+
+				<a href="" onclick="prevSlide()" class="left control-carousel hidden-xs"><i class="fa fa-angle-left"></i></a>
+				<a href="" onclick="nextSlide()" class="right control-carousel hidden-xs"><i class="fa fa-angle-right"></i></a>
+			</div>
+		</section><!--/slider-->
+
+		<section>
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-3" id="categories">
+						<div class="left-sidebar">
+							
+							<h2>Categorías</h2>
+							<div class="panel-group category-products"><!--category-productsr-->
+								<div ng-repeat="category in categories" class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title"><a ng-href="/category/{{category.id}}">{{category.title}}</a></h4>
+									</div>
+								</div>
+							</div><!--/category-products-->
+							
+							<h2>Marcas</h2>
+							<div class="panel-group category-products"><!--brand-productsr-->
+								<div ng-repeat="brand in brands" class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title"><a ng-href="/category/{{brand.id}}">{{brand.title}}</a></h4>
+									</div>
+								</div>
+							</div><!--/brand-products-->
+
+						</div>
+					</div>
+					
+					<div class="col-sm-9 padding-right">
+						<div class="features_items"><!--features_items-->
+							<h2 class="title text-center">Nuevos</h2>
+
+							<div class="col-sm-4" ng-repeat="product in products">
+								<div class="product-image-wrapper">
+									<div class="single-products">
+										<div class="productinfo text-center">
+											<img class="main-product" ng-src="{{product.images[0].url.https}}" alt="{{product.title}}" />
+											<h2>{{product.price.data.formatted.without_tax}}</h2>
+											<p>{{product.title}}</p>
+											<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<h2>{{product.price.data.formatted.without_tax}}</h2>
+												<p>{{product.title}}</p>
+												<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+											</div>
+										</div>
+										<img src="images/home/new.png" class="new" alt="New" />
+										<!-- <img src="images/home/sale.png" class="new" alt="Sale" /> -->
+									</div>
+								</div>
+							</div>
+							
+						</div><!--features_items-->		
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
