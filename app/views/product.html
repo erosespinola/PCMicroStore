@@ -11,7 +11,7 @@
 							<div class="panel-group category-products"><!--category-productsr-->
 								<div ng-repeat="category in categories" class="panel panel-default">
 									<div class="panel-heading">
-										<h4 class="panel-title"><a ng-href="/category/{{category.id}}">{{category.title}}</a></h4>
+										<h4 class="panel-title"><a ng-href="#/products?category={{category.id}}">{{category.title}}</a></h4>
 									</div>
 								</div>
 							</div><!--/category-products-->
@@ -20,7 +20,7 @@
 							<div class="panel-group category-products"><!--brand-productsr-->
 								<div ng-repeat="brand in brands" class="panel panel-default">
 									<div class="panel-heading">
-										<h4 class="panel-title"><a ng-href="/category/{{brand.id}}">{{brand.title}}</a></h4>
+										<h4 class="panel-title"><a ng-href="#/products?brand={{brand.id}}">{{brand.title}}</a></h4>
 									</div>
 								</div>
 							</div><!--/brand-products-->

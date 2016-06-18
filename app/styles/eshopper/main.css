@@ -68,7 +68,7 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-  background: none repeat scroll 0 0 #FE980F;;
+  background: none repeat scroll 0 0 #F0F0E9;
 }
 
 .contactinfo ul li:first-child{
@@ -90,7 +90,7 @@ a#scrollUp i{
 .social-icons ul li a {
   border: 0 none;
   border-radius: 0;
-  color: #fff;
+  color: #696763;
   padding:0px;
 }
 
@@ -101,7 +101,7 @@ a#scrollUp i{
 
 .social-icons ul li a i {
   padding: 11px 15px;
-  transition: all 0.9s ease 0s;
+   transition: all 0.9s ease 0s;
   -moz-transition: all 0.9s ease 0s;
   -webkit-transition: all 0.9s ease 0s;
   -o-transition: all 0.9s ease 0s;
@@ -124,8 +124,12 @@ a#scrollUp i{
 	background:#5BBCEC;
 }
 
-.fa-envelope:hover  {
+.fa-linkedin:hover  {
 	background:#FF4518;
+}
+
+.fa-envelope:hover  {
+  background:#CE3C2D;
 }
 
 .fa-dribbble:hover  {
@@ -190,7 +194,6 @@ a#scrollUp i{
 	display:inline-block;
   padding-left: 15px;
   padding-right: 15px;
-  margin-top: 10px;
 }
 
 .shop-menu ul li:last-child {
@@ -263,10 +266,10 @@ a#scrollUp i{
   height: 35px;
   outline: medium none;
   padding-left: 10px;
-  width: 255px;
+  width: 155px;
   background-image: url(../../images/home/searchicon.png);
   background-repeat: no-repeat;
-  background-position: 230px;
+  background-position: 130px;
 }
 
 
@@ -347,35 +350,32 @@ ul.sub-menu {
 **************************/
 
 #footer {
-  background: #FFB24D;
+  background: #F0F0E9;
 }
 
 
 .footer-top .container {
-  border-bottom: 0px solid;
+  border-bottom: 1px solid #E0E0DA;
   padding-bottom: 20px;
 }
 
-.companyinfo-footer h2 {
-  color: #fff;
+.companyinfo {
+  margin-top: 0px;
+}
+
+.companyinfo h2 {
+  color: #666663;
   font-family: abel;
   font-size: 27px;
   text-transform: uppercase;
 }
 
-.companyinfo h2 {
-  color: #B4B1AB;
-  font-family: abel;
-  font-size: 34px;
-  text-transform: uppercase;
-}
-
-.companyinfo h2 span {
+.companyinfo h2  span{
   color:#FE980F;
 }
 
-.companyinfo-footer p {
-  color: #fff;
+.companyinfo p {
+  color: #666663;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 300;
@@ -479,7 +479,7 @@ ul.sub-menu {
 }
 
 .single-widget h2 {
-  color: #fff;
+  color: #666663;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -492,7 +492,7 @@ ul.sub-menu {
 }
 
 .single-widget ul li a{
-	color: #fff;
+	color: #8C8C88;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -505,7 +505,7 @@ ul.sub-menu {
 
 .single-widget ul li a:hover{
 	background:none;
-	color:#dadada;
+	color:#FE980F;
 }
 
 
@@ -549,13 +549,12 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  /*background: #D6D6D0;*/
-  background: #FE980F;
+  background: #D6D6D0;
   padding-top: 10px;
 }
 
 .footer-bottom p {
-  color: #fff;
+  color: #363432;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   margin-left: 15px;
@@ -579,19 +578,10 @@ ul.sub-menu {
 
 .carousel-indicators li {
   background: #C4C4BE;
-  height: 13px;
-  width: 13px;
-  margin-left: 5px;
-  margin-right: 5px;
-  border-width: 0px;
 }
 
 .carousel-indicators li.active {
-  background: #FE980F;
-  height: 16px;
-  width: 16px;
-  margin-left: 5px;
-  margin-right: 5px;
+	  background: #FE980F;
 }
 
 .item {
@@ -605,10 +595,8 @@ ul.sub-menu {
   top: 52%;
 }
 
-.img-slider {
+.girl {
   margin-left: 0;
-  height: 250px;
-  width: auto;
 }
 
 .item h1 {
@@ -1189,6 +1177,7 @@ h2.title {
 
 .view-product img {
   border: 1px solid #F7F7F0;
+  height: 380px;
   width: 100%;
 }
 
@@ -2276,8 +2265,8 @@ h2.title {
 }
 
 .blog-socials ul li a:hover {
-  color: #FE980F;
-  background: #FE980F;
+  color: #fff;
+  background:#FE980F
 }
 
 

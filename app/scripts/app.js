@@ -60,16 +60,39 @@ angular
         }
     })
 
-    .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-    })
-
     .when('/products', {
         templateUrl: 'views/products.html',
         controller: 'ProductsCtrl',
-        controllerAs: 'products'
+        controllerAs: 'products',
+        resolve: {
+            brands: function($q, MoltinAuth) {
+                var deferred = $q.defer();
+                $q.when(MoltinAuth).then(function(moltin) {
+                    moltin.Brand.List(null, function(brands) {
+                        deferred.resolve(brands);
+                    });
+                });
+                return deferred.promise;
+            },
+            categories: function($q, MoltinAuth) {
+                var deferred = $q.defer();
+                $q.when(MoltinAuth).then(function(moltin) {
+                    moltin.Category.List(null, function(categories) {
+                        deferred.resolve(categories);
+                    });
+                });
+                return deferred.promise;
+            },
+            items: function($q, MoltinAuth) {
+                var deferred = $q.defer();
+                $q.when(MoltinAuth).then(function(moltin) {
+                    moltin.Product.List({limit: 12}, function(items) {
+                        deferred.resolve(items);
+                    });
+                });
+                return deferred.promise;
+            }
+        }
     })
 
     .when('/product/:id', {
@@ -146,6 +169,12 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
+    })
+
+    .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
     })
 
     .otherwise({

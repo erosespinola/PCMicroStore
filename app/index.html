@@ -14,6 +14,7 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="styles/eshopper/price-range.css" />
   <link rel="stylesheet" type="text/css" href="styles/eshopper/main.css" />
   <link rel="stylesheet" type="text/css" href="styles/eshopper/responsive.css" />
   <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" />
@@ -116,7 +117,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <div class="companyinfo-footer">
+              <div class="companyinfo">
                 <h2>PCMicro</h2>
                 <p><i>Precio, calidad y garantía.</i></p>
                 <p><i class="fa fa-phone-square fa-lg"></i> (311) 218-0005</p>
@@ -124,25 +125,6 @@
                 <p><i class="fa fa-facebook-square fa-lg"></i> pc.micro</p>
               </div>
             </div>
-            <!--
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Categorías</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a ng-href="#">Accesorios</a></li>
-                  <li><a ng-href="#">Almacenamiento</a></li>
-                  <li><a ng-href="#">Componentes</a></li>
-                  <li><a ng-href="#">Consumibles</a></li>
-                  <li><a ng-href="#">Control de acceso</a></li>
-                  <li><a ng-href="#">Impresoras</a></li>
-                  <li><a ng-href="#">Monitores</a></li>
-                  <li><a ng-href="#">Punto de venta</a></li>
-                  <li><a ng-href="#">Redes</a></li>
-                  <li><a ng-href="#">Software</a></li>
-                </ul>
-              </div>
-            </div>
-            -->
             <div class="col-sm-2">
               <div class="single-widget">
                 <h2>Sobre PCMicro</h2>
@@ -203,7 +185,8 @@
     <!-- endbuild -->
 
     <script src="scripts/vendor/moltin.min.js"></script>
-
+    <script src="scripts/vendor/price-range.js"></script>
+    
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>

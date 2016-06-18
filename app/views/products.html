@@ -1,1 +1,72 @@
-<p>This is the category view.</p>
+<div class="row">
+	<div class="col-sm-12">
+
+		<section>
+			<div class="row">
+
+					<div class="col-sm-3" id="categories">
+						<div class="left-sidebar">
+						
+						<h2>Categorías</h2>
+						<div class="panel-group category-products"><!--category-productsr-->
+							<div ng-repeat="category in categories" class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><input class="products-checkbox" type="checkbox"><a>{{category.title}}</a></h4>
+								</div>
+							</div>
+						</div><!--/category-products-->
+						
+						<h2>Marcas</h2>
+						<div class="panel-group category-products"><!--brand-productsr-->
+							<div ng-repeat="brand in brands" class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><input class="products-checkbox" type="checkbox"><a>{{brand.title}}</a></h4>
+								</div>
+							</div>
+						</div><!--/brand-products-->
+
+						<div class="price-range"><!--price-range-->
+							<h2>Price Range</h2>
+							<div class="well text-center">
+								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="30000" data-slider-step="5" data-slider-value="[0,10000]" id="products-range" ><br />
+								 <b class="pull-left">$0</b><b class="pull-right">$30,000</b>
+							</div>
+						</div><!--/price-range-->
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Productos</h2>
+
+						<div class="col-sm-4" ng-repeat="item in items">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img class="main-product" ng-src="{{item.images[0].url.https}}" alt="{{item.title}}" />
+										<h2>{{item.price.data.formatted.without_tax}}</h2>
+										<p>{{item.title}}</p>
+										<a ng-href="#/product/{{item.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>{{item.price.data.formatted.without_tax}}</h2>
+											<p>{{item.title}}</p>
+											<a ng-href="#/product/{{item.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div><!--features_items-->		
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('#products-range').slider();
+</script>
