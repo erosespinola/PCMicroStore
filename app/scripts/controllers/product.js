@@ -13,5 +13,11 @@ angular.module('pcmicroStoreApp').controller('ProductCtrl', function($scope, cat
 	$scope.item = item;
 	$scope.relatedItems = _.reject(relatedItems, function(relatedItem) {
 		return relatedItem.id === item.id;
-	}).slice(0, 3);
+	}).slice(0, 6);
+
+	console.log($scope.relatedItems);
+
+	$('#contact_link').removeClass('active');
+    $('#home_link').removeClass('active');
+	$('#products_link').addClass('active');
 });

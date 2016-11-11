@@ -19,11 +19,6 @@ angular
     'ngTouch'
 ])
 .config(function($locationProvider, $routeProvider) {
-    /*$locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });*/
-
     $routeProvider
     .when('/', {
         templateUrl: 'views/main.html',
@@ -33,7 +28,7 @@ angular
             brands: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Brand.List(null, function(brands) {
+                    moltin.Brand.List({limit: 30}, function(brands) {
                         deferred.resolve(brands);
                     });
                 });
@@ -42,7 +37,7 @@ angular
             categories: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Category.List(null, function(categories) {
+                    moltin.Category.List({limit: 30}, function(categories) {
                         deferred.resolve(categories);
                     });
                 });
@@ -51,7 +46,7 @@ angular
             products: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Product.List({limit: 12}, function(products) {
+                    moltin.Product.List({limit: 21}, function(products) {
                         deferred.resolve(products);
                     });
                 });
@@ -68,7 +63,7 @@ angular
             brands: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Brand.List(null, function(brands) {
+                    moltin.Brand.List({limit: 30}, function(brands) {
                         deferred.resolve(brands);
                     });
                 });
@@ -77,7 +72,7 @@ angular
             categories: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Category.List(null, function(categories) {
+                    moltin.Category.List({limit: 30}, function(categories) {
                         deferred.resolve(categories);
                     });
                 });
@@ -86,11 +81,14 @@ angular
             items: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Product.List({limit: 12}, function(items) {
+                    moltin.Product.List({limit: 300}, function(items) {
                         deferred.resolve(items);
                     });
                 });
                 return deferred.promise;
+            },
+            params: function($route) {
+                return $route.current.params;
             }
         }
     })
@@ -103,7 +101,7 @@ angular
             brands: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Brand.List(null, function(brands) {
+                    moltin.Brand.List({limit: 30}, function(brands) {
                         deferred.resolve(brands);
                     });
                 });
@@ -112,7 +110,7 @@ angular
             categories: function($q, MoltinAuth) {
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
-                    moltin.Category.List(null, function(categories) {
+                    moltin.Category.List({limit: 30}, function(categories) {
                         deferred.resolve(categories);
                     });
                 });
@@ -131,7 +129,7 @@ angular
                 var deferred = $q.defer();
                 $q.when(MoltinAuth).then(function(moltin) {
                     moltin.Product.Get($route.current.params.id, function(item) {
-                        moltin.Product.Search({limit: 4, category: Object.keys(item.category.data)[0]}, function(items) {
+                        moltin.Product.Search({limit: 7, category: Object.keys(item.category.data)[0]}, function(items) {
                             deferred.resolve(items);
                         });
                     });

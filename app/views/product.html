@@ -29,62 +29,65 @@
 					</div>
 					
 					<div class="col-sm-9 padding-right">
-						<div class="product-details"><!--product-details-->
-							<div class="col-sm-5">
-								<div class="view-product">
-									<img ng-src="{{item.images[0].url.https}}" alt="{{item.title}}" />
-									<!-- <h3>ZOOM</h3> -->
+						<div class="row">
+							<div class="col-sm-12 product-details"><!--product-details-->
+								<div class="col-sm-5">
+									<div class="view-product">
+										<img ng-src="{{item.images[0].url.https}}" alt="{{item.title}}" />
+										<!-- <h3>ZOOM</h3> -->
+									</div>
 								</div>
-							</div>
 
-							<div class="col-sm-7">
-								<div class="product-information"><!--/product-information-->
-									<h2>{{item.title}}</h2>
-									<p>SKU: {{item.sku}}</p>
-									<!-- <img src="images/product-details/rating.png" alt="" /> -->
-									<span>
-										<span>{{item.price.data.formatted.without_tax}}</span>
-										<!-- <label>Cantidad:</label>
-										<input type="text" value="3" />
-										<button type="button" class="btn btn-fefault cart">
-											<i class="fa fa-shopping-cart"></i>
-											Añadir al carrito
-										</button> -->
-									</span>
-									<p><b>Disponibilidad:</b> En tienda</p>
-									<p><b>Marca:</b> {{item.brand.value}}</p>
-									<p><b>Descripción:</b> {{item.description}}</p>
-								</div><!--/product-information-->
-							</div>
-						</div><!--/product-details-->
+								<div class="col-sm-7">
+									<div class="product-information"><!--/product-information-->
+										<h2>{{item.title}}</h2>
+										<p>SKU: {{item.sku}}</p>
+										<!-- <img src="images/product-details/rating.png" alt="" /> -->
+										<span>
+											<span>{{item.price.data.formatted.without_tax}}</span>
+											<!-- <label>Cantidad:</label>
+											<input type="text" value="3" />
+											<button type="button" class="btn btn-fefault cart">
+												<i class="fa fa-shopping-cart"></i>
+												Añadir al carrito
+											</button> -->
+										</span>
+										<p><b>Disponibilidad:</b> En tienda</p>
+										<p><b>Marca:</b> {{item.brand.value}}</p>
+										<p><b>Descripción:</b> {{item.description}}</p>
+									</div><!--/product-information-->
+								</div>
+							</div><!--/product-details-->
+						</div>
 					</div>
 
 					<div class="col-sm-9 padding-right">
-						<div class="recommended_items"><!--recommended_items-->
-							<h2 class="title text-center">Más {{item.category.value}}</h2>
-							
-							<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-								<div class="carousel-inner">
-									<div class="item active" ng-repeat="relatedItem in relatedItems">
+						<div class="features_items"><!--features_items-->
+							<h2 class="title text-center">Más en {{item.category.value}}</h2>
 
-										<div class="col-sm-4">
-											<div class="product-image-wrapper">
-												<div class="single-products">
-													<div class="productinfo text-center">
-														<img ng-src="{{relatedItem.images[0].url.https}}" alt="{{relatedItem.title}}" class="main-product"/>
-														<h2>{{item.price.data.formatted.without_tax}}</h2>
-														<p>{{relatedItem.title}}</p>
-														<a href="#/product/{{relatedItem.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
-													</div>
-												</div>
+							<div class="col-sm-4" ng-repeat="product in relatedItems">
+								<div class="product-image-wrapper">
+									<div class="single-products">
+										<div class="productinfo text-center">
+											<img class="main-product" ng-src="{{product.images[0].url.https}}" alt="{{product.title}}" />
+											<h2>{{product.price.data.formatted.without_tax}}</h2>
+											<p>{{product.title}}</p>
+											<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<h2>{{product.price.data.formatted.without_tax}}</h2>
+												<p>{{product.title}}</p>
+												<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
 											</div>
 										</div>
-
 									</div>
-								</div>		
+								</div>
 							</div>
-						</div><!--/recommended_items-->
+						
+						</div><!--features_items-->		
 					</div>
+
 				</div>
 			</div>
 		</section>

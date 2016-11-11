@@ -1,1 +1,46 @@
-<p>This is the contact view.</p>
+<div id="contact-page">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 class="title text-center contact-title">Contáctanos</h2>
+      <div id="gmap" class="contact-map"></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="contact-info">
+        <h2 class="title text-center">Información</h2>
+        <address>
+          <p>PC Micro</p>
+          <p>Av. Insurgentes 893A, FOVISSSTE 1A Etapa</p>
+          <p>Tepic, Nayarit, México</p>
+          <p>Mobile: (311) 218-0005</p>
+          <p>Email: <a ng-href="mailto:jj_espinola@hotmail.com">jj_espinola@hotmail.com</a></p>
+        </address>
+
+        <div class="social-networks">
+          <h2 class="title text-center">Redes Sociales</h2>
+          <ul>
+            <li>
+              <a ng-href="https://www.facebook.com/pc.micro" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a ng-href="mailto:jj_espinola@hotmail.com"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var myLatLng = { lat: 21.5182483, lng: -104.9185645 };
+
+    var map = new google.maps.Map(document.getElementById('gmap'), {
+      zoom: 16,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'PC Micro'
+    });
+  </script>
+</div>

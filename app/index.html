@@ -13,11 +13,11 @@
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" type="text/css" href="styles/eshopper/price-range.css" />
   <link rel="stylesheet" type="text/css" href="styles/eshopper/main.css" />
   <link rel="stylesheet" type="text/css" href="styles/eshopper/responsive.css" />
   <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <!-- endbuild -->
 </head>
 
@@ -45,22 +45,22 @@
       </div><!--/header_top-->
 
       <div class="header-middle"><!--header-middle-->
-        <div class="container">
+        <div class="container main-container">
           <div class="row">
             <div class="col-sm-4">
               <div class="companyinfo">
-                <h2><span>PC</span>Micro</h2>
+                <h3><span>PC</span>Micro</h3>
               </div>
             </div>
             <div class="col-sm-8">
               <div class="shop-menu pull-right">
                 <ul class="nav navbar-nav">
-                <!--                   
-                <li><a ng-href="#/user"><i class="fa fa-user"></i> Mi usuario</a></li>
-                <li><a ng-href="#/cart"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
-                <li><a ng-href="#/checkout"><i class="fa fa-credit-card"></i> Caja</a></li>
-                <li><a ng-href="#/login"><i class="fa fa-sign-in"></i> Iniciar sesión</a></li> 
-                -->
+                                 
+                <!--<li><a ng-href="#/user"><i class="fa fa-user"></i> Mi usuario</a></li>
+                <li><a ng-href="#/login"><i class="fa fa-sign-in"></i> Iniciar sesión</a></li> -->
+                <li><a ng-href="#/cart" class="shop-menu-link"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
+                <li><a ng-href="#/checkout" class="shop-menu-link"><i class="fa fa-credit-card"></i> Caja</a></li>
+                
                 </ul>
               </div>
             </div>
@@ -71,7 +71,7 @@
       <div class="header-bottom"><!--header-bottom-->
         <div class="container">
           <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-7">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                   <span class="sr-only">Toggle navigation</span>
@@ -94,11 +94,11 @@
                     </ul>
                   </li> 
                   -->
-                  <li><a href="#/contact" id="contact_link" class="">Contacto</a></li>
+                  <li><a ng-href="#/contact" id="contact_link" class="">Contacto</a></li>
                 </ul>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-5">
               <div class="search_box pull-right">
                 <input type="text" placeholder="Buscar"/>
               </div>
@@ -117,31 +117,22 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <div class="companyinfo">
-                <h2>PCMicro</h2>
-                <p><i>Precio, calidad y garantía.</i></p>
-                <p><i class="fa fa-phone-square fa-lg"></i> (311) 218-0005</p>
-                <p><i class="fa fa-envelope-square fa-lg"></i> jj_espinola@hotmail.com</p>
-                <p><i class="fa fa-facebook-square fa-lg"></i> pc.micro</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
               <div class="single-widget">
-                <h2>Sobre PCMicro</h2>
+                <h2>PCMicro</h2>
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a ng-href="#"> &#149; Información</a></li>
-                  <li><a ng-href="#"> &#149; Ubicación</a></li>
-                  <li><a ng-href="#"> &#149; Copyright</a></li>
+                  <li><a ng-href="#"><i class="fa fa-phone-square fa-lg"></i> (311) 218-0005</a></li>
+                  <li><a ng-href="mailto:jj_espinola@hotmail.com"><i class="fa fa-envelope-square fa-lg"></i> jj_espinola@hotmail.com</a></li>
+                  <li><a target="_blank" ng-href="https://www.facebook.com/pc.micro"><i class="fa fa-facebook-square fa-lg"></i> pc.micro</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="single-widget">
-                <h2>Políticas</h2>
+                <h2>Menú</h2>
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a ng-href="#"> &#149; Terminos de uso</a></li>
-                  <li><a ng-href="#"> &#149; Políticas de privacidad</a></li>
-                  <li><a ng-href="#"> &#149; Políticas de devolución</a></li>
+                  <li><a ng-href="/">Inicio</a></li>
+                  <li><a ng-href="#/products">Productos</a></li>
+                  <li><a ng-href="#/contact">Contacto</a></li>
                 </ul>
               </div>
             </div>
@@ -171,16 +162,16 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/underscore/underscore.js"></script>
+    <script src='bower_components/jquery/dist/jquery.js'></script>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
+    <script src='bower_components/angular-animate/angular-animate.js'></script>
+    <script src='bower_components/angular-cookies/angular-cookies.js'></script>
+    <script src='bower_components/angular-resource/angular-resource.js'></script>
+    <script src='bower_components/angular-route/angular-route.js'></script>
+    <script src='bower_components/angular-sanitize/angular-sanitize.js'></script>
+    <script src='bower_components/angular-touch/angular-touch.js'></script>
+    <script src='bower_components/underscore/underscore.js'></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -200,5 +191,7 @@
     <script src="scripts/services/moltinauth.js"></script>
     <script src="scripts/widgets/slider.js"></script>
     <!-- endbuild -->
+
+    <script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB1nc6jXIzgEIBH4KbjeN95p1B4wR-bLpg'></script>
   </body>
   </html>

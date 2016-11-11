@@ -1,9 +1,47 @@
 .main-product {
-	height: 150px;
+	height: 90px;
+	margin: 15px;
+	width: auto !important;
+}
+
+.view-product img {
+	height: 190px;
+	padding: 15px;
 	width: auto !important;
 }
 
 .products-checkbox {
-	margin-right: 0.7em !important;
-	vertical-align: text-top;
+	margin-right: 0.2em !important;
+}
+
+.header-middle {
+	background: #F0F0E9;
+}
+
+.shop-menu ul li a {
+	background: #F0F0E9;
+	margin-top: 20px;
+}
+
+.contact-title {
+	margin: 0 !important;
+}
+
+.companyinfo h3 {
+  color: #666663;
+  font-family: abel;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+.companyinfo h3 span {
+  color:#FE980F;
+}
+
+.header-middle .container .row {
+	padding: 0;
+}
+
+#gmap {
+	margin-top: 30px;
 }
