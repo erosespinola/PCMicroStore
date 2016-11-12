@@ -44,14 +44,14 @@
 							<div class="well text-center">
 								<div class="input-group priceform">
 									<span class="input-group-addon">$</span>
-									<input type="number" value="{{selectedPrices.low}}" class="form-control">
+									<input step="1000" min="0" type="number" ng-model="lowPrice" class="form-control">
 								</div>
 								<p style="margin: 5px 0 5px 0;">a</p>
 								<div class="input-group priceform">
 									<span class="input-group-addon">$</span>
-									<input type="number" value="{{selectedPrices.high}}" class="form-control">
+									<input step="1000" min="0" type="number" ng-model="highPrice" class="form-control">
 								</div>
-								<button class="btn price-button" type="button"> Filtrar </button>
+								<button class="btn price-button" ng-click="filterItems()" type="button">Filtrar</button>
 							</div>
 						</div><!--/price-range-->
 					</div>
@@ -66,15 +66,19 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img class="main-product" ng-src="{{item.images[0].url.https}}" alt="{{item.title}}" />
-										<h2>{{item.price.data.formatted.without_tax}}</h2>
+										<h2>{{item.price.value}}</h2>
 										<p>{{item.title}}</p>
-										<a ng-href="#/product/{{item.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+										<a ng-href="#/product/{{item.id}}" class="btn btn-default add-to-cart view-more"><i class="fa fa-eye"></i>Ver más</a>
+                    <br />
+                    <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al carrito</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>{{item.price.data.formatted.without_tax}}</h2>
+											<h2>{{item.price.value}}</h2>
 											<p>{{item.title}}</p>
-											<a ng-href="#/product/{{item.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+											<a ng-href="#/product/{{item.id}}" class="btn btn-default add-to-cart view-more"><i class="fa fa-eye"></i>Ver más</a>
+                      <br />
+                      <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al carrito</a>
 										</div>
 									</div>
 								</div>

@@ -8,8 +8,7 @@
 *
 * Main module of the application.
 */
-angular
-.module('pcmicroStoreApp', [
+angular.module('pcmicroStoreApp', [
     'pcmicroStoreApp.MoltinAuth',
     'ngAnimate',
     'ngCookies',

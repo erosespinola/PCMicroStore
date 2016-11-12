@@ -62,15 +62,19 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img class="main-product" ng-src="{{product.images[0].url.https}}" alt="{{product.title}}" />
-										<h2>{{product.price.data.formatted.without_tax}}</h2>
+										<h2>{{product.price.value}}</h2>
 										<p>{{product.title}}</p>
-										<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+										<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart view-more"><i class="fa fa-eye"></i>Ver más</a>
+                    <br />
+                    <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al carrito</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<h2>{{product.price.data.formatted.without_tax}}</h2>
+											<h2>{{product.price.value}}</h2>
 											<p>{{product.title}}</p>
-											<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Ver más</a>
+											<a ng-href="#/product/{{product.id}}" class="btn btn-default add-to-cart view-more"><i class="fa fa-eye"></i>Ver más</a>
+                      <br />
+                      <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al carrito</a>
 										</div>
 									</div>
 									<img src="images/home/new.png" class="new" alt="New" />

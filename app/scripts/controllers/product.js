@@ -8,16 +8,14 @@
  * Controller of the pcmicroStoreApp
  */
 angular.module('pcmicroStoreApp').controller('ProductCtrl', function($scope, categories, brands, item, relatedItems) {
-    $scope.categories = _.sortBy(categories, "title");
+  $scope.categories = _.sortBy(categories, "title");
 	$scope.brands = _.sortBy(brands, "title");
 	$scope.item = item;
 	$scope.relatedItems = _.reject(relatedItems, function(relatedItem) {
 		return relatedItem.id === item.id;
 	}).slice(0, 6);
 
-	console.log($scope.relatedItems);
-
 	$('#contact_link').removeClass('active');
-    $('#init_link').removeClass('active');
+  $('#init_link').removeClass('active');
 	$('#products_link').addClass('active');
 });

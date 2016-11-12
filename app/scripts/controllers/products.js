@@ -11,7 +11,8 @@ angular.module('pcmicroStoreApp').controller('ProductsCtrl', function ($scope, c
 	$scope.items = items;
 	$scope.selectedBrands = {};
 	$scope.selectedCategories = {};
-	$scope.selectedPrices = {low: null, high: null};
+	$scope.lowPrice = 0;
+	$scope.highPrice = 0;
 	
 	$scope.brands = _.sortBy(brands, 'title');
 	$scope.categories = _.sortBy(categories, 'title');
@@ -25,18 +26,15 @@ angular.module('pcmicroStoreApp').controller('ProductsCtrl', function ($scope, c
 			return carry || category; 
 		}, false);
 		
-		if (hasCategorySelected && hasBrandSelected) {
-			$scope.items = _.reject(items, function(item) {
-				return !$scope.selectedCategories[_.keys(item.category.data)[0]] || 
-							 !$scope.selectedBrands[item.brand.data.id];
-			});
-		} else if (hasCategorySelected) {
-			$scope.items = _.reject(items, function(item) {
-				return !$scope.selectedCategories[_.keys(item.category.data)[0]];
-			});
-		} else if (hasBrandSelected) {
-			$scope.items = _.reject(items, function(item) {
-				return !$scope.selectedBrands[item.brand.data.id];
+		var hasPriceSelected = !!$scope.lowPrice || !!$scope.highPrice;
+	
+		if (hasCategorySelected || hasBrandSelected || hasPriceSelected) {
+			$scope.items = _.filter(items, function(item) {
+				return (hasCategorySelected ? $scope.selectedCategories[_.keys(item.category.data)[0]] : true) && 
+				       (hasBrandSelected ? $scope.selectedBrands[item.brand.data.id] : true) && 
+				       (hasPriceSelected ? item.price.data.raw.with_tax <= $scope.highPrice && 
+							                     item.price.data.raw.with_tax >= $scope.lowPrice :
+							                     true);
 			});
 		} else {
 			$scope.items = items;
