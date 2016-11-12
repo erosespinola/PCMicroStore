@@ -4,7 +4,7 @@
 		<section>
 			<div class="row">
 
-					<div class="col-sm-4" id="categories">
+					<div class="col-sm-3" id="categories">
 						<div class="left-sidebar">
 						
 						<h2>Categorías</h2>
@@ -42,14 +42,22 @@
 						<div class="price-range"><!--price-range-->
 							<h2>Precio</h2>
 							<div class="well text-center">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="30000" data-slider-step="5" data-slider-value="[0,10000]" id="products-range" ><br />
-								 <b class="pull-left">$0</b><b class="pull-right">$30,000</b>
+								<div class="input-group priceform">
+									<span class="input-group-addon">$</span>
+									<input type="number" value="{{selectedPrices.low}}" class="form-control">
+								</div>
+								<p style="margin: 5px 0 5px 0;">a</p>
+								<div class="input-group priceform">
+									<span class="input-group-addon">$</span>
+									<input type="number" value="{{selectedPrices.high}}" class="form-control">
+								</div>
+								<button class="btn price-button" type="button"> Filtrar </button>
 							</div>
 						</div><!--/price-range-->
 					</div>
 				</div>
 				
-				<div class="col-sm-8 padding-right">
+				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Productos</h2>
 

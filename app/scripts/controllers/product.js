@@ -18,6 +18,6 @@ angular.module('pcmicroStoreApp').controller('ProductCtrl', function($scope, cat
 	console.log($scope.relatedItems);
 
 	$('#contact_link').removeClass('active');
-    $('#home_link').removeClass('active');
+    $('#init_link').removeClass('active');
 	$('#products_link').addClass('active');
 });

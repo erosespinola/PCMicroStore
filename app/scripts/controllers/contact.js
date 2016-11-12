@@ -9,6 +9,6 @@
  */
 angular.module('pcmicroStoreApp').controller('ContactCtrl', function () {
 	$('#contact_link').addClass('active');
-    $('#home_link').removeClass('active');
+    $('#init_link').removeClass('active');
 	$('#products_link').removeClass('active');
 });

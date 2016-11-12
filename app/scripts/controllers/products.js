@@ -11,6 +11,8 @@ angular.module('pcmicroStoreApp').controller('ProductsCtrl', function ($scope, c
 	$scope.items = items;
 	$scope.selectedBrands = {};
 	$scope.selectedCategories = {};
+	$scope.selectedPrices = {low: null, high: null};
+	
 	$scope.brands = _.sortBy(brands, 'title');
 	$scope.categories = _.sortBy(categories, 'title');
 
@@ -50,6 +52,6 @@ angular.module('pcmicroStoreApp').controller('ProductsCtrl', function ($scope, c
 	}
 
  	$('#products_link').addClass('active');
-  $('#home_link').removeClass('active');
+  $('#init_link').removeClass('active');
 	$('#contact_link').removeClass('active');
 });

@@ -45,3 +45,40 @@
 #gmap {
 	margin-top: 30px;
 }
+
+.input-group-addon {
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1;
+	color: #000;
+	text-align: center;
+	background-color: #F0F0E9;;
+	border: 1px solid #ccc;
+	border-radius: 0px;
+}
+
+.priceform input {
+	border-radius: 0px;
+}
+
+.price-button {
+  background: #FE980F;
+  border: 0 none;
+  border-radius: 0;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.price-button:focus, .price-button:active {
+  background: #FE980F;
+  color: #FFFFFF;
+}
+
+.price-button:hover {
+	background: #fea328;
+  color: #FFFFFF;
+}

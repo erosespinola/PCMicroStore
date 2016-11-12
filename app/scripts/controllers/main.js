@@ -33,7 +33,7 @@ angular.module('pcmicroStoreApp').controller('MainCtrl', function($scope, catego
 	};
 
 
-	$('#home_link').addClass('active');
+	$('#init_link').addClass('active');
 	$('#products_link').removeClass('active');
 	$('#contact_link').removeClass('active');
 });
